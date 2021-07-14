@@ -1,3 +1,31 @@
+/*
+//simple solution, two pointer
+func abs(a int) int {
+    if a < 0 {
+        return -a
+    }
+    return a
+}
+func sortedSquares(nums []int) []int {
+    var ret []int
+    start := 0
+    end := len(nums)-1
+    for start < end {
+        if abs(nums[start]) > abs(nums[end]) {
+            ret = append([]int{nums[start]*nums[start]}, ret...)
+            start++
+        } else {
+            ret = append([]int{nums[end]*nums[end]}, ret...)
+            end--
+        }
+    }
+    ret = append([]int{nums[start]*nums[start]}, ret...)
+    return ret
+}
+
+*/
+
+//insert sort and output
 func abs(a int) int {
     if a < 0 {
         return -a
